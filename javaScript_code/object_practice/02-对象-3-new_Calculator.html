@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //new 构造器：
+        function Calculator() {
+            this.sum = function() {
+                return this.a + this.b
+            }
+
+            this.read = function() {
+                this.a = +prompt("input a",0)
+                this.b = +prompt("input b",0)
+            }
+
+            this.mul = function() {
+                return this.a * this.b
+            }
+        }
+
+        let calculator = new Calculator()
+        calculator.read()
+
+        alert( "Sum=" + calculator.sum() )
+        alert( "Mul=" + calculator.mul() )
+    </script>
+</body>
+</html>
