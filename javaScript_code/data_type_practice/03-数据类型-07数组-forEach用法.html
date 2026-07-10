@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
+        alert(`${item} is at index ${index} in ${array}`);
+        });
+        //forEach 在每次迭代时，会固定顺序地给你的回调函数传入三个参数：
+        // 参数位置	含义	示例（第一次迭代）
+        // 第 1 个	当前元素的值	"Bilbo"
+        // 第 2 个	当前元素的索引	0
+        // 第 3 个	数组本身的引用	["Bilbo", "Gandalf", "Nazgul"]
+    </script>
+</body>
+</html>
