@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Random(a,b){
+            let x = a + Math.random() * (b - a + 1)
+            return x
+        }
+
+        let min = +prompt("input min edge",0)
+        let max = +prompt("input max edge",0)
+        alert(Random(min,max))
+    </script>
+</body>
+</html>
