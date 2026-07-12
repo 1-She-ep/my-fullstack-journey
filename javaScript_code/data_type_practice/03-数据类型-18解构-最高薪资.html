@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function topSalary(salaries) {
+            let maxsalary = 0
+            let maxname = null
+            for (let [name,salary] of Object.entries(salaries)){
+                if(salary > maxsalary){
+                    maxsalary = salary
+                    maxname = name
+                }
+            }
+            return [maxname,maxsalary]
+        }
+
+        let salaries = {
+        "John": 100,
+        "Pete": 300,
+        "Mary": 250
+        };
+
+        alert(topSalary(salaries))
+
+    </script>
+</body>
+</html>
