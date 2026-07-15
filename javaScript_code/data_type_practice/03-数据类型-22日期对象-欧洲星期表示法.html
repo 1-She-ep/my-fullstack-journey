@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let getLocalDay = function(day) {
+            return day.getDay() != 0 ? day.getDay() : 7
+        }
+        let date = new Date(2012, 0, 3);  // 3 Jan 2012
+        alert( getLocalDay(date) );       // 星期二，应该显示 2
+    </script>
+</body>
+</html>

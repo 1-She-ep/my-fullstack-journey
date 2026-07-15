@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let getWeekDay = function(day) {
+            let weekday = ['Sun','Mon','Tue','Wen','Thur','Fri','Sar']
+            return weekday[day.getDay()]
+        }
+
+        let date = new Date(2012, 0, 3);  // 3 Jan 2012
+        alert( getWeekDay(date) );        // 应该输出 "TU"
+    </script>
+</body>
+</html>

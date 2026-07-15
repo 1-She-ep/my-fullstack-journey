@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getSecondsToday() {
+        let now = new Date();
+
+        // 使用当前的 day/month/year 创建一个对象
+        let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+        let diff = now - today; // ms difference
+        return Math.round(diff / 1000); // make seconds
+        }
+
+
+        function getSecondsToday_() {
+            let now = new Date()
+            let time = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds()
+            return time
+        }
+
+        alert( getSecondsToday() );
+        alert( getSecondsToday_() );
+
+
+    </script>
+</body>
+</html>
