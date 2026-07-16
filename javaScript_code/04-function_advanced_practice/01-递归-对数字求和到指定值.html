@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumTo1(n) { 
+            let sum = 0
+            for(let i = 1;i <= n;i++){
+                sum += i
+            }
+            return sum
+         }//循环
+
+         function sumTo2(n) {
+            return n == 1 ? 1 : n + sumTo2(n-1)
+         }//递归
+
+         function sumTo3(n) {
+            return (1 + n) * n / 2
+         }//公式求和
+        alert( sumTo1(100) ); // 5050
+        alert( sumTo2(100) );
+        alert( sumTo3(100) );
+    </script>
+</body>
+</html>
