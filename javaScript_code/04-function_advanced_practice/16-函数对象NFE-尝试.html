@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ask(question, ...handlers) {
+        let isYes = confirm(question);
+
+        for(let handler of handlers) {
+            if (handler.length == 0) {
+            if (isYes) handler();
+            } else {
+            handler(isYes);
+            }
+        }
+
+        }
+
+        // 对于肯定的回答，两个 handler 都会被调用
+        // 对于否定的回答，只有第二个 handler 被调用
+        ask("Question?", () => alert('You said yes'), result => alert(result));
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function makeCounter() {
+
+        function counter() {
+            
+            return counter.count++;
+        };
+        counter.count = 0;
+
+        counter.set = function(value){
+            counter.count = value
+            return counter.count
+        }
+        counter.decrease = function(){
+            counter.count--
+            return counter.count
+        }
+
+        
+        return counter;
+        }
+
+        let counter = makeCounter();
+        alert(counter()) //应该返回下一个数字（与之前的逻辑相同）。
+        let value = 10
+        alert(counter.set(value)) //应该将 count 设置为 value。
+        alert(counter.decrease())
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function makeWorker() {
+        let name = "Pete";
+
+        return function() {
+            alert(name);
+        };
+        }
+
+        let name = "John";
+
+        // 创建一个函数
+        let work = makeWorker();
+
+        // 调用它
+        work(); // 会显示什么？
+
+        //I choose pete
+    </script>
+</body>
+</html>
