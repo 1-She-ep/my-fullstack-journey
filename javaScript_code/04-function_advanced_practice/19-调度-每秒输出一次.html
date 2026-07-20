@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function printNumbers1(from, to) {
+            let x = from
+            let timeid = setInterval(function fuc(){
+                alert(x)
+                if(x === to){
+                clearInterval(timeid)
+            }
+                x++
+            },1000)
+        }
+
+        function printNumbers2(from,to) {
+            let x = from
+            let timeid = setTimeout(function go(){
+                alert(x)
+                if(x < to){
+                timeid = setTimeout(go,1000)
+            }
+                x++
+            },1000)
+            
+        }
+
+
+        // printNumbers1(1,10)
+        printNumbers2(10,20)
+    </script>
+</body>
+</html>

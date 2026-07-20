@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i = 0;
+
+        setTimeout(() => alert(i), 100); // ?
+
+        // 假设这段代码的运行时间 >100ms
+        for(let j = 0; j < 100000000; j++) {
+        i++;
+        }
+
+        //我觉得就是for循环执行到100ms的时候的i值
+        //答案是1000000000...
+        //任何 setTimeout 都只会在当前代码执行完毕之后才会执行。
+        //所以 i 的取值为：100000000。
+    </script>
+</body>
+</html>
